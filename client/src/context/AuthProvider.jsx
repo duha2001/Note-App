@@ -8,6 +8,7 @@ export default function AuthProvider({ children }) {
   const navigate = useNavigate();
 
   const auth = getAuth();
+  console.log("Auth:", auth);
 
   useEffect(() => {
     const unsubcribed = auth.onIdTokenChanged((user) => {
